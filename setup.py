@@ -45,7 +45,7 @@ setup(
     ],
     packages=find_packages(),
     install_requires=REQUIREMENTS,
-    entry_points={"console_scripts": ["galho=galho.__main__:main"]},
+    entry_points={"console_scripts": ["galho=galho.main:main"]},
     project_urls={
         "Bug Reports": "https://github.com/joaopalmeiro/galho/issues",
         "Source": "https://github.com/joaopalmeiro/galho",

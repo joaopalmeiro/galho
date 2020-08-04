@@ -1,4 +1,4 @@
-# __main__.py
+# main.py
 
 from pathlib import Path
 
@@ -43,13 +43,14 @@ def get_root_representation(root, root_representation):
         return ""
 
 
-def main(root, pre_indentation_line, root_representation):
+def main(root=Path.cwd(), pre_indentation_line="", root_representation="dot"):
+    clean_terminal()
+
+    # tree_wo_indentation_lines()
     print(get_root_representation(root, root_representation))
     for branch in tree_generator(root, ""):
         print(branch)
 
 
 if __name__ == "__main__":
-    clean_terminal()
-    main(Path.cwd(), "", "dot")
-    # tree_wo_indentation_lines()
+    main()
